@@ -1,0 +1,26 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.45);
+  backdrop-filter: blur(3px);
+  display: grid;
+  place-items: center;
+  z-index: 100;
+}
+.modal {
+  width: clamp(320px, 42vw, 520px);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: 0 24px 48px var(--shadow-color);
+  padding: 20px 22px;
+  display: grid;
+  gap: 16px;
+  animation: modalIn .16s ease-out;
+}
+.modal-header { font-size: 18px; font-weight: 700; color: var(--text) }
+.modal-body { display: grid; gap: 12px }
+.modal-actions { display: flex; justify-content: flex-end; gap: 10px }
+.chips { display: flex; flex-wrap: wrap; gap: 8px }
+.chip { background: var(--bg); color: var(--text); border: 1px solid var(--border); border-radius: 999px; padding: 6px 10px; font-size: 13px }
+@keyframes modalIn { from { transform: translateY(6px); opacity: 0 } to { transform: translateY(0); opacity: 1 } }

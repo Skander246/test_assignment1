@@ -1,0 +1,38 @@
+:root {
+  --orange: #ffce22;
+  --orange-hover: #ffd84a;
+  --green: #32c36a;
+  --text: #1f2128;
+  --muted: #676b75;
+  --bg: #f5f6f8;
+  --surface: #ffffff;
+  --border: #e5e5e5;
+  --shadow-color: rgba(0,0,0,.12);
+}
+:root[data-theme="dark"] {
+  --text: #e6e7ea;
+  --muted: #a8acb3;
+  --bg: #0f1115;
+  --surface: #1a1d23;
+  --border: #2a2f38;
+  --shadow-color: rgba(0,0,0,.5);
+}
+
+* { box-sizing: border-box }
+html, body, #root { height: 100% }
+body { margin: 0; background: var(--bg); color: var(--text); font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif }
+
+.page { min-height: 100vh; display: grid; grid-template-rows: 1fr; background: radial-gradient(1000px 600px at 20% -10%, rgba(255, 206, 34, .18), transparent 55%), radial-gradient(800px 500px at 100% 0%, rgba(36, 105, 246, .12), transparent 60%), var(--bg) }
+.title { font-weight: 600; font-size: 18px }
+.theme-actions { display: inline-flex; align-items: center; gap: 10px }
+
+.app { display: grid; place-items: center; gap: 24px; padding: 24px }
+.shell { width: 100%; max-width: 960px; padding: clamp(16px, 4vw, 32px) }
+.grid { display: grid; gap: 24px; grid-template-columns: 1fr }
+@media (min-width: 900px) { .grid { grid-template-columns: 1fr 1fr } }
+.panel { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; box-shadow: 0 12px 32px var(--shadow-color); padding: 24px; display: grid; gap: 16px }
+.panel-title { font-size: 16px; font-weight: 600; color: var(--text) }
+.section { display: grid; gap: 12px; width: 100% }
+.label { font-size: 14px; color: var(--muted) }
+.full-row { width: 344px }
+.page-title { font-size: 20px; font-weight: 700; margin: 0 0 16px 0; color: var(--text) }

@@ -1,0 +1,15 @@
+.checkbox {
+  width: 25px;
+  height: 25px;
+  border-radius: 4px;
+  border: 2px solid var(--border);
+  background: var(--surface);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background .15s ease, border-color .15s ease, box-shadow .15s ease;
+}
+.checkbox:hover { border-color: #2469f6 }
+.checkbox.checked { background: #2469f6; border-color: #2469f6 }
+.checkbox.pressed { background: #5087f8; border-color: #5087f8 }
+.checkbox svg { display: block }
